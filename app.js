@@ -14,6 +14,6 @@ app.use("/api/calculator", require("./routes/calculatorRoutes"));
 //User Authentication 
 app.use("/api/auth", require("./routes/authRoutes"));
 // //Meal Planner
-// app.use("/api/meals");
+app.use("/api/meals", require("./routes/mealRoutes"));
 
 app.listen(PORT, ()=> console.log(`Port in running on port ${PORT}`));

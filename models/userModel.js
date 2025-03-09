@@ -57,6 +57,10 @@ const userSchema = mongoose.Schema({
          type: Boolean,  // User agrees to data collection
          default: null
     }, 
+    mealPlans :[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref: "MealPlan" 
+    }]
 }, {timestamps: true});
 
 module.exports = mongoose.model("User", userSchema);
